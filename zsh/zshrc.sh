@@ -2,6 +2,8 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=/usr/local/opt/apache-maven-3.3.9/bin:$PATH
 export PATH=/usr/local/opt/python/libexex/bin:$PATH
+export PATH=/Applications/MacVim.app/Contents/bin:$PATH
+export PATH=$HOME/Library/Python/2.7/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/dotfiles/zsh/plugins/oh-my-zsh"
@@ -9,7 +11,9 @@ export ZSH="$HOME/dotfiles/zsh/plugins/oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+#ZSH_THEME="robbyrussell"
+#ZSH_THEME="bureau"
+ZSH_THEME="ys"
 #ZSH_THEME="agnoster"
 
 # Set list of themes to pick from when loading at random
@@ -59,22 +63,27 @@ ZSH_THEME="robbyrussell"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+# only define LC_CTYPE if undefined or is UTF-8
+export LC_ALL=fi_FI.UTF-8
+export LANG=fi_FI.UTF-8
+#if [[ -z "$LC_CTYPE" || "$LC_CTYPE" -eq "UTF-8" ]]; then
+#    export LC_CTYPE=${LANG%%:*} # pick the first entry from LANG
+#fi
+
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git mvn osx sudo brew extract)
+plugins=(git mvn osx sudo brew extract zsh_reload)
 
 source $ZSH/oh-my-zsh.sh
-
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
-
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
