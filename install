@@ -2,6 +2,8 @@ mv ~/.zshrc ~/.zshrc.old
 #mv ~/.tmux.conf ~/.tmux.conf.old
 #mv ~/.vimrc ~/.vimrc.old
 
+(cd ~/dotfiles && git pull && git submodule update --init --recursive)
+
 printf "source '$HOME/dotfiles/zsh/setup.sh'" > ~/.zshrc
 #printf "so $HOME/dotfiles/vim/vimrc.vim" > ~/.vimrc
-#printf "source-file $HOME/dotfiles/tmux/tmux.conf" > ~/.tmux.conf
+printf "source-file $HOME/dotfiles/tmux/tmux.conf" > ~/.tmux.conf
